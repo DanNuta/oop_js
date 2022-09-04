@@ -36,10 +36,19 @@ class FinishedProject {
 
     projectFinish = [];
 
+
+    set addFinish(value){
+        const newFinish = [...this.projectFinish, value];
+
+        return newFinish;
+    }
+
     finishProject = (item) =>{
-        this.projectFinish.push(item)
+        this.projectFinish = this.addFinish = item;
+
 
         console.log(this.projectFinish)
+
     }
 }
 
@@ -50,11 +59,6 @@ class RenderEachTask {
     constructor(task){
         this.task = task;
     }
-
-
-
-
-   
 
 
     btnAccept = () =>{
